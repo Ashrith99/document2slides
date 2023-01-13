@@ -23,15 +23,15 @@ if __name__ == '__main__':
     subparsers = parser.add_subparsers(help='pick a mode',dest='mode')
 
     # shared params
-    parser.add_argument("-model_path", default='../models/')
-    parser.add_argument("-cache_path", default='../cache/')
-    parser.add_argument("-result_path", default='../results/')
+    parser.add_argument("-model_path", default='/content/document2slides/models/')
+    parser.add_argument("-cache_path", default='/content/document2slides/cache/')
+    parser.add_argument("-result_path", default='/content/document2slides/results/')
 
     # params for caching IR
     parser_ir = subparsers.add_parser('ir', help='cache information retrieval documents')
-    parser_ir.add_argument("-slide_json", default='../input/acl_slides_filter.json')
-    parser_ir.add_argument("-paper_path", default='../input/sciduet_papers/')
-    parser_ir.add_argument("-split_path", default="../input/split/")
+    parser_ir.add_argument("-slide_json", default='/content/document2slides/input/acl_slides_prefilter.json/input/acl_slides_filter.json') 
+    parser_ir.add_argument("-paper_path", default='/content/document2slides/input/sciduet_papers')
+    parser_ir.add_argument("-split_path", default='/content/document2slides/input/split')
     parser_ir.add_argument("-ir_model", default="../models/bert_mix_ir.pth")
     parser_ir.add_argument("-filter", type=str2bool, nargs='?', const=True, default=True)
     parser_ir.add_argument("-eval", type=str2bool, nargs='?', const=True, default=False)

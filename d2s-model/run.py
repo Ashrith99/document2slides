@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
     # params for caching IR
     parser_ir = subparsers.add_parser('ir', help='cache information retrieval documents')
-    parser_ir.add_argument("-slide_json", default='/content/document2slides/input/acl_slides_prefilter.json/input/acl_slides_filter.json') 
+    parser_ir.add_argument("-slide_json", default='/content/document2slides/input/acl_slides_prefilter.json') 
     parser_ir.add_argument("-paper_path", default='/content/document2slides/input/sciduet_papers')
     parser_ir.add_argument("-split_path", default='/content/document2slides/input/split')
     parser_ir.add_argument("-ir_model", default="../models/bert_mix_ir.pth")
